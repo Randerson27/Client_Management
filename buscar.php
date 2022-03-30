@@ -1,6 +1,6 @@
 <?php
 include("conexao.php");
-//sessão script
+//script de sessão
 session_start();
 
 if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
@@ -12,11 +12,21 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
     $logado = $_SESSION['Email'];
    
   };
-   //fim sessão script
+  //fim script de sessão 
 
-   //Retorno de todos os regitros
+
+  //Sistema de filtragem de registros
+  if(empty($_POST["busca"])){
+
     $sql = "SELECT * FROM clientes ";
       $result = $mysqli->query($sql);
+  }else{
+    $busca = $_POST["busca"];
+   
+        $sql = "SELECT * FROM clientes WHERE Nome LIKE'%$busca%' OR Email LIKE'%$busca%' ";
+        $result = $mysqli->query($sql);
+    
+  }
 
 ?>
     <!doctype html>
@@ -85,7 +95,6 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
                   <tbody>
 
                      <?php
-                  
                       while($data = mysqli_fetch_assoc($result)){
                     ?>
                       <tr class="table-secondary">            
