@@ -110,7 +110,7 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
                                   <input class="form-control" value="<?php echo $info_clientes["Endereco"]?>" name="Endereco" type="text" >
 
                                   <label class="form-label" for="Cpf">Cpf</label>
-                                  <input class="form-control" value="<?php echo $info_clientes["Cpf"]?>" name="Cpf" type="text" >
+                                  <input class="form-control" value="<?php echo $info_clientes["Cpf"]?>" name="Cpf" id="Cpf" type="text" >
                                     
                                   <input type="hidden" name="id" value="<?php echo $info_clientes["id"]?>">
                                   <input type="submit" class="mt-3 btn btn-warning" value="Confirmar alteração">
@@ -133,6 +133,7 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
         <script src="js/bootstrap.bundle.min.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/jquery.mask.js"></script>
         <script type="text/javascript" src="js/funcoes.js"></script>
         <!-- Validação de campos-->
         <script type="text/javascript">
@@ -141,19 +142,13 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
           };
 
           $(document).ready(function(){
+            $("#Cpf").mask("999.999.999-99");
               $("#nomeForm").validate({
                   rules:{
                       Nome:{
                           required:true,
                           maxlength:50
                       },
-
-                      Cpf:{
-                          required:true,
-                          maxlength:14,
-                          minlength:14
-                      },
-
                       Email:{
                           required:true,
                           maxlength:40

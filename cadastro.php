@@ -121,6 +121,7 @@ include("conexao.php");
         <script src="js/bootstrap.bundle.min.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/jquery.mask.js"></script>
         <script type="text/javascript">
         function btn_voltar(){
             window.location.href = "http://localhost/Gerenciador_de_Clientes/login.php";

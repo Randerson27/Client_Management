@@ -103,6 +103,7 @@ include("conexao.php");
         <script src="js/bootstrap.bundle.min.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/jquery.mask.js"></script>
         <script type="text/javascript">
         
           

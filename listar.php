@@ -77,7 +77,7 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
                       <th style="text-align:center;" scope="col">Nome</th>
                       <th style="text-align:center;" scope="col">Email</th>
                       <th style="text-align:center;" scope="col">Endereço</th>
-                      <th style="text-align:center;" scope="col">Cpf</th>
+                      <th name="cpf-mask" style="text-align:center;" scope="col">Cpf</th>
                       <th style="text-align:center;" scope="col"><input type="button" class="btn btn-primary" id="btn-adicionar" value="Adicionar" onClick="btn_adicionar()"></th>
                       
                     </tr>
@@ -117,8 +117,9 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
         <script src="js/bootstrap.bundle.min.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/jquery.mask.js"></script>
         <script type="text/javascript">
-         
+
             function btn_adicionar(){
               window.location.href = "http://localhost/Gerenciador_de_Clientes/inserir.php";
             }

@@ -74,7 +74,7 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
 
                       <div class="form-group">
                         <label for="Cpf" class="form-label mt-4">CPF</label>
-                        <input type="name" class="form-control" id="Cpf" name="Cpf" placeholder="ex:333.444.555.66">
+                        <input type="name" class="form-control" id="Cpf" name="Cpf" placeholder="ex:333.444.555-66">
                       </div>
 
                       <div class="mt-3 form-group">
@@ -96,6 +96,7 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
         <script src="js/bootstrap.bundle.min.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/jquery.mask.js"></script>
     
         <!-- Validação de campos-->
         <script type="text/javascript">
@@ -104,17 +105,12 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
           };
         
           $(document).ready(function(){
+            $("#Cpf").mask("999.999.999-99");
               $("#nomeForm").validate({
                   rules:{
                       Nome:{
                           required:true,
                           maxlength:50
-                      },
-
-                      Cpf:{
-                          required:true,
-                          maxlength:14,
-                          minlength:14
                       },
 
                       Email:{
@@ -127,7 +123,9 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
                           required:true
                       }
                   }
-              })
+              });
+
+        
           });
 
         </script>

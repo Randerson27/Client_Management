@@ -126,6 +126,7 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
         <script src="js/bootstrap.bundle.min.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/jquery.mask.js"></script>
         <script type="text/javascript">
          
             function btn_adicionar(){
