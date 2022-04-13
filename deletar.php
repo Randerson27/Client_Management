@@ -98,6 +98,9 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
 
                                   <label class="form-label" for="Cpf">Cpf</label>
                                   <input class="form-control" value="<?php echo $info_clientes["Cpf"]?>" name="Cpf" type="text">
+
+                                  <label class="form-label" for="Data_nasc">Data Nascimento</label>
+                                  <input class="form-control" value="<?php echo $info_clientes["Data_nasc"]?>" name="Data_nasc" type="date">
                                     
                                   <input type="hidden" name="id" value="<?php echo $info_clientes["id"]?>">
                                   <input type="submit" class="mt-3 btn btn-danger" value="Confirmar exclusão">
@@ -114,8 +117,6 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
                 </div>
               </div>
             <!--Fim Formulario-->
-
-
 
         </header>
 

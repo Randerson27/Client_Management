@@ -77,6 +77,11 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
                         <input type="name" class="form-control" id="Cpf" name="Cpf" placeholder="ex:333.444.555-66">
                       </div>
 
+                      <div class="form-group">
+                        <label for="Data_nasc" class="form-label mt-4">Data Nascimento</label>
+                        <input type="date" class="form-control" id="Data_nasc" name="Data_nasc" placeholder="ex:01/01/2022">
+                      </div>
+
                       <div class="mt-3 form-group">
                         <input type="submit" class="btn btn-primary" value="Cadastrar" onclick="validar()">
                       </div>

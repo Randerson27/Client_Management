@@ -21,9 +21,10 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
      $email = $_POST["Email"];
      $endereco = $_POST["Endereco"];
      $cpf = $_POST["Cpf"];
+     $data_nasc = $_POST["Data_nasc"];
 
      //query
-     $sql = "UPDATE clientes SET Nome = '{$nome}', Email = '{$email}', Endereco = '{$endereco}', Cpf = '{$cpf}' WHERE id = {$id}";
+     $sql = "UPDATE clientes SET Nome = '{$nome}', Email = '{$email}', Endereco = '{$endereco}', Cpf = '{$cpf}', Data_nasc = '{$data_nasc}' WHERE id = {$id}";
      $alteracao = mysqli_query($mysqli, $sql);
 
      if(!$alteracao){
@@ -111,6 +112,9 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
 
                                   <label class="form-label" for="Cpf">Cpf</label>
                                   <input class="form-control" value="<?php echo $info_clientes["Cpf"]?>" name="Cpf" id="Cpf" type="text" >
+
+                                  <label class="form-label" for="Data_nasc">Data Nascimento</label>
+                                  <input class="form-control" value="<?php echo $info_clientes["Data_nasc"]?>" name="Data_nasc" id="Data_nasc" type="date" >
                                     
                                   <input type="hidden" name="id" value="<?php echo $info_clientes["id"]?>">
                                   <input type="submit" class="mt-3 btn btn-warning" value="Confirmar alteração">
