@@ -64,7 +64,7 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
                 <!--Formulario de busca-->
                 <form action="buscar.php" method="post">
                   <div class="input-group mb-3 mt-3">
-                    <input type="text" name="busca" class="form-control" placeholder="Pesquise o nome de um cliente ou e-mail">
+                    <input type="text" name="busca" class="form-control" placeholder="Escolha uma categoria e faça sua pesquisa">
                       <div class="col-md-2">
                         <select class="form-select bg-dark text-white" name="chave">
                           <option selected value="Nome">Nome</option>
@@ -105,7 +105,7 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
                         <td style="text-align:center;"><?php echo $data["Email"]?></td>
                         <td style="text-align:center;"><?php echo $data["Endereco"]?></td>
                         <td style="text-align:center;"><?php echo $data["Cpf"]?></td>
-                        <td style="text-align:center;"><?php echo $data["Data_nasc"]?></td>
+                        <td style="text-align:center;"><?php echo date("d/m/Y", strtotime($data["Data_nasc"]));?> </td>      
                         <td style="text-align:center;">
                           <a class="btn btn-warning" href="alterar.php?codigo=<?php echo $data["id"]?>"><img src="img/edit.png" width="25px"></a>
 

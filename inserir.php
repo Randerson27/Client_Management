@@ -54,7 +54,7 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
             <!--Formulario-->
             <div>
               <div class="container">
-                <form action="inserir_cliente.php" name="nomeForm" id="nomeForm" method="POST">
+                <form action="inserir_cliente.php" name="nomeForm" id="nomeForm" method="post">
                   <div class="col-md-5">
 
                     <div class="form-group">
@@ -79,7 +79,7 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
 
                       <div class="form-group">
                         <label for="Data_nasc" class="form-label mt-4">Data Nascimento</label>
-                        <input type="date" class="form-control" id="Data_nasc" name="Data_nasc" placeholder="ex:01/01/2022">
+                        <input type="date" class="form-control" id="Data_nasc" name="Data_nasc">
                       </div>
 
                       <div class="mt-3 form-group">

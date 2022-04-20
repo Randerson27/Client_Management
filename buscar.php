@@ -74,7 +74,7 @@ if(!isset($_SESSION["Email"]) || !isset($_SESSION['Senha'])){
                 <!--Formulario de busca-->
                 <form action="buscar.php" method="post">
                 <div class="input-group mb-3 mt-3">
-                    <input type="text" name="busca" class="form-control" placeholder="Pesquise o nome de um cliente ou e-mail">
+                    <input type="text" name="busca" class="form-control" placeholder="Escolha uma categoria e faça sua pesquisa">
                       <div class="col-md-2">
                         <select class="form-select bg-dark text-white" name="chave">
                           <option selected value="Nome">Nome</option>
